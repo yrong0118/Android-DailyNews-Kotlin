@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    tools:context=".login"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    tools:context=".login"-->
+    <!--    android:paddingLeft="20dp"-->
+    <!--    android:paddingRight="20dp"-->
+    <!--    android:paddingTop="20dp"-->
+    <!--    android:orientation="vertical">-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="Setting"
+        android:id="@+id/setting" />
+
+    <TextView
+        android:id="@+id/ClearCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/four_dp"
+        android:text="Clear Cache"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="Change News Source"
+        android:id="@+id/changeNews" />
+
+    <TextView
+        android:id="@+id/usNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/four_dp"
+        android:text="US News"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/germanNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/four_dp"
+        android:text="German News"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/changeSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="Change Language"/>
+
+    <TextView
+        android:id="@+id/usSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/four_dp"
+        android:text="American"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/germanSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/four_dp"
+        android:text="German"
+        android:textSize="16sp" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+

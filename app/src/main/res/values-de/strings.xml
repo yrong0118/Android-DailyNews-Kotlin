@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Nachrichten</string>
+    <string name="website_url">https://www.google.com/</string>
+    <string name="share_link">Share The Link</string>
+    <string name="copy_the_link">Copy The Link</string>
+    <!-- add bottom bar string -->
+    <string name="tin">Finden</string>
+    <string name="save">speichern</string>
+    <string name="profile">Profil</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment1">Hello blank fragment1</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_unknown">Unbekannter Titel</string>
+
+
+    <string name="clear_cache">Cache leeren</string>
+    <string name="setting">Rahmen</string>
+
+    <string name="change_source">Quelle ändern</string>
+    <string name="de">de</string>
+    <string name="us">us</string>
+
+    <string name="username">Nutzername:</string>
+    <string name="password">Passwort:</string>
+    <string name="login">Einloggen</string>
+    <string name="register">Register</string>
+    <string name="passwordH">passwort</string>
+    <string name="passwordHC">Passwort bestätigen</string>
+    <string name="backToLogin">Zurück zur Anmeldung</string>
+    <string name="titleNews">Titel:</string>
+    <string name="descriptionNews">Beschreibung:</string>
+
+</resources>
