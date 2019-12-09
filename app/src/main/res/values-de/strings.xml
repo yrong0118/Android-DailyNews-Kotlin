@@ -33,4 +33,9 @@
     <string name="titleNews">Titel:</string>
     <string name="descriptionNews">Beschreibung:</string>
 
+    <string name="usNews">US-Nachrichten</string>
+    <string name="germanNews">Deutsche Nachrichten</string>
+    <string name="american">amerikanisch</string>
+    <string name="german">Deutsche</string>
+
 </resources>

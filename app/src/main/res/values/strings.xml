@@ -31,5 +31,8 @@
     <string name="backToLogin">Back to Login</string>
     <string name="titleNews">Title:</string>
     <string name="descriptionNews">Description:</string>
-
+    <string name="usNews">US News</string>
+    <string name="germanNews">German News</string>
+    <string name="american">American</string>
+    <string name="german">German</string>
 </resources>

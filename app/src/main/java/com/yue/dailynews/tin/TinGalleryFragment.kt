@@ -86,7 +86,7 @@ class TinGalleryFragment : TinBasicFragment(), TinNewsCard.OnSwipeListener {
 
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(
-                    this@TinGalleryFragment.activity,
+                    context,
                     "Failed to retrieve operation:$error",
                     Toast.LENGTH_SHORT
                 ).show()
@@ -151,7 +151,8 @@ class TinGalleryFragment : TinBasicFragment(), TinNewsCard.OnSwipeListener {
 
     fun getData() {
         var newsRequestApi = RetrofitClient.instance.create(NewsRequestApi::class.java)
-        val API = getString(R.string.newsApi)
+        //val API = getString(R.string.newsApi)
+        val API = "6b7c3376c6934a36ad8ab7346fa28cf6"
         newsRequestApi.getNewsByCountry(country, API)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -159,6 +160,11 @@ class TinGalleryFragment : TinBasicFragment(), TinNewsCard.OnSwipeListener {
             .subscribe(
                 { baseResponse -> showNewsCard(baseResponse.articles) },
                 { throwable ->
+                    //*******************************
+                    if (context == null) {
+                        throw IllegalStateException("Fragment " + this + " not attached to a context.");
+                    }
+                    //*******************************
                     Toast.makeText(this.context, "News API Failed", Toast.LENGTH_SHORT).show()
                     throwable.printStackTrace()
                 }
@@ -201,14 +207,20 @@ class TinGalleryFragment : TinBasicFragment(), TinNewsCard.OnSwipeListener {
                         mapLike.put(oper.title, oper.isLike)
                     }
                 }
-
+                mSwipeView.removeAllViews()
                 for (news: News in newsList) {
-                    if (!mapLike.containsKey(news.title)) {
+                    if (news!= null && !mapLike.containsKey(news.title)) {
                         var tinNewsCard: TinNewsCard =
                             TinNewsCard(news, mSwipeView, this@TinGalleryFragment)
                         swipeView.addView(tinNewsCard)
                     }
                 }
+
+//                for (news: News in newsList) {
+//                    var tinNewsCard: TinNewsCard =
+//                        TinNewsCard(news, mSwipeView, this@TinGalleryFragment)
+//                    swipeView.addView(tinNewsCard)
+//                }
             }
         })
     }

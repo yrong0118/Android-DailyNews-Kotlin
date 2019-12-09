@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:text="Setting"
+        android:text="@string/setting"
         android:id="@+id/setting" />
 
     <TextView
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/four_dp"
-        android:text="Clear Cache"
+        android:text="@string/clear_cache"
         android:textSize="16sp" />
 
     <TextView
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:text="Change News Source"
+        android:text="@string/change_source"
         android:id="@+id/changeNews" />
 
     <TextView
@@ -48,7 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/four_dp"
-        android:text="US News"
+        android:text="@string/usNews"
         android:textSize="16sp" />
 
     <TextView
@@ -56,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/four_dp"
-        android:text="German News"
+        android:text="@string/germanNews"
         android:textSize="16sp" />
 
     <TextView
@@ -65,14 +65,14 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:text="Change Language"/>
+        android:text="@string/change_source"/>
 
     <TextView
         android:id="@+id/usSource"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/four_dp"
-        android:text="American"
+        android:text="@string/american"
         android:textSize="16sp" />
 
     <TextView
@@ -80,7 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/four_dp"
-        android:text="German"
+        android:text="@string/german"
         android:textSize="16sp" />
 
 

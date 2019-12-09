@@ -11,6 +11,7 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseUser
 import com.yue.dailynews.common.Util
 import com.yue.dailynews.common.Util.Companion.isStringEmpty
@@ -91,8 +92,33 @@ class Register : AppCompatActivity() {
                             val currentUser: FirebaseUser? = firebaseAuth.currentUser
                             val email = currentUser?.email
                             Toast.makeText(this, "Registered as $email", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this, MainActivity::class.java)
-                            startActivity(intent)
+                            firebaseAuth.signInWithEmailAndPassword(inputtedUsername, inputtedPassword)
+                                .addOnCompleteListener{task->
+                                    if (task.isSuccessful) {
+                                        val currentUser: FirebaseUser? = firebaseAuth.currentUser
+                                        val email = currentUser?.email
+                                        Toast.makeText(this, "Logged in as: $email", Toast.LENGTH_SHORT).show()
+
+                                        val intent = Intent(this, MainActivity::class.java)
+                                        startActivity(intent)
+                                    }else {
+                                        val exception = task.exception
+
+                                        // Example of logging some extra metadata (the error reason) with our analytic
+                                        val reason =
+                                            if (exception is FirebaseAuthInvalidCredentialsException) "invalid_credentials" else "connection_failure"
+                                        val bundle = Bundle()
+                                        bundle.putString("error_type", reason)
+
+                                        Toast.makeText(this, "Registration failed: $exception", Toast.LENGTH_SHORT)
+                                            .show()
+
+                                        progressBar.visibility = View.INVISIBLE
+
+                                    }
+
+                                }
+
                         } else {
                             val exception = task.exception
                             Toast.makeText(this, "Registration failed: $exception", Toast.LENGTH_SHORT).show()
