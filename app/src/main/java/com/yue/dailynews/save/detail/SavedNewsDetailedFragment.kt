@@ -74,7 +74,8 @@ class SavedNewsDetailedFragment : TinBasicFragment() {
         if(!Util.isStringEmpty(news.description)){
             viewModels.add(DescriptionViewModel(news.description) as BaseViewModel<RecyclerView.ViewHolder>)
         }
-        viewModels.add(goBackViewModel(tinFragmentManager) as BaseViewModel<RecyclerView.ViewHolder>)
+        viewModels.add(goBackViewModel(tinFragmentManager,this) as BaseViewModel<RecyclerView.ViewHolder>)
+
 
         viewModelAdapter.addViewModels(viewModels)
     }
